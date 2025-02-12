@@ -21,7 +21,7 @@
   <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
       <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-        <div class="relative w-1/2 max-w-2xl px-6 lg:max-w-7xl">
+        <div class="relative w-[850px] max-w-2xl px-6 lg:max-w-7xl">
           <header class="grid grid-flow-col auto-cols-max md:auto-cols-min">
              @yield('header')
           </header>
