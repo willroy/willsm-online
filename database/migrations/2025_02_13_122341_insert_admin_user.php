@@ -17,6 +17,8 @@ return new class extends Migration
             'email' => 'willjoroy@gmail.com',
             'password' => Hash::make('wowZA!jak')
         ]);
+
+        // !!! change above password and move into enviroment variable on server before making github repo public !!!
     }
 
     /**
