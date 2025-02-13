@@ -1,12 +1,6 @@
 @extends('main')
 
 @section('content')
-   <div class="grid grid-cols-2 gap-4">
-      <x-HomeButton label="Music" img="../assets/music.png" href="{{ url('/music') }}" fontsize="60px" delay="150ms"/>
-      <x-HomeButton label="Art" img="" href="{{ url('/art') }}" fontsize="80px" delay="200ms"/>
-      <x-HomeButton label="About" img="" href="{{ url('/about') }}" fontsize="70px" delay="350ms"/>
-      <x-HomeButton label="Projects" img="" href="{{ url('/projects') }}" fontsize="50px" delay="200ms"/>
-   </div>
 @endsection
 
 @section('footer')
