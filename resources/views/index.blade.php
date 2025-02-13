@@ -1,11 +1,11 @@
 @extends('main')
 
 @section('content')
-	<div class="grid grid-cols-2 gap-4">
-      <div class="animate-fadein opacity-0" style="animation-delay: 350ms">@include('dashboard.inc.music')</div>
-      <div class="animate-fadein opacity-0">@include('dashboard.inc.art')</div>
-      <div class="animate-fadein opacity-0" style="animation-delay: 750ms">@include('dashboard.inc.aboutme')</div>
-      <div class="animate-fadein opacity-0" style="animation-delay: 500ms">@include('dashboard.inc.projects')</div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="animate-fadein opacity-0" style="animation-delay: 350ms">@include('dashboard.music')</div>
+      <div class="animate-fadein opacity-0">@include('dashboard.art')</div>
+      <div class="animate-fadein opacity-0" style="animation-delay: 750ms">@include('dashboard.aboutme')</div>
+      <div class="animate-fadein opacity-0" style="animation-delay: 500ms">@include('dashboard.projects')</div>
    </div>
 @endsection
 

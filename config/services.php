@@ -14,6 +14,10 @@ return [
     |
     */
 
+    'db' => [
+        'name' => env('DB_DATABASE'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
