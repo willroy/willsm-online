@@ -11,4 +11,9 @@ class MainController extends Controller
     {
         return view('index', []);
     }
+
+    public function music(): View
+    {
+        return view('music', []);
+    }
 }
