@@ -1,55 +1,19 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-    <title>Laravel</title>
+@section('content')
+   <div class="grid sm:grid-cols-2 grid-cols-1 gap-4">
+      <x-HomeButton label="Music" img="../assets/music.png" href="{{ url('/music') }}" fontsize="60px" delay="120ms"/>
+      <x-HomeButton label="Art" img="" href="{{ url('/art') }}" fontsize="80px" delay="150ms"/>
+      <x-HomeButton label="About" img="" href="{{ url('/about') }}" fontsize="70px" delay="170ms"/>
+      <x-HomeButton label="Projects" img="" href="{{ url('/projects') }}" fontsize="50px" delay="180ms"/>
+   </div>
+@endsection
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-    <!-- Styles / Scripts -->
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-      @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-      <style>
-      </style>
-    @endif
-    @stack("tagscript")
-  </head>
-  <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-      <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-        <div class="relative sm:w-[850px] w-full px-6">
-          <header class="grid grid-flow-col auto-cols-max md:auto-cols-min">
-             @yield('header')
-          </header>
-
-          <main class="mt-12 px-8">
-            @yield('content')
-          </main>
-
-          <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-            @yield('footer')
-
-            @if (Auth::check())
-            <br><br>
-            <h1>Welcome, {{ Auth::user()->name }}</h1>
-            <h1>Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</h1>
-            <h1>DB: {{ config('services.db.name') }}
-            <br>
-            <br>
-            <form method="POST" action="{{ route('logout') }}">
-              @csrf
-              <button type="submit" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Logout</button>
-            </form>
-            @endif
-
-          </footer>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+@section('footer')
+   <div class="animate-fadein opacity-0 w-full h-auto flex items-center justify-center gap-2 flex-wrap mt-4" style="animation-delay: 200ms">
+      <div class="p-3 w-3 h-3 bg-gray-400 rounded-full hover:rounded-sm hover:cursor-pointer -start-1.5 border border-gray-500"></div>
+      <div class="p-3 w-3 h-3 bg-yellow-400 rounded-full hover:rounded-sm hover:cursor-pointer -start-1.5 border border-gray-500"></div>
+      <div class="p-3 w-3 h-3 bg-pink-400 rounded-full hover:rounded-sm hover:cursor-pointer -start-1.5 border border-gray-500"></div>
+      <div class="p-3 w-3 h-3 bg-green-400 rounded-full hover:rounded-sm hover:cursor-pointer -start-1.5 border border-gray-500"></div>
+   </div>
+@endsection

@@ -9,30 +9,29 @@ use App\Models\Tag;
 
 class MainController extends Controller
 {
-    public function index(): View
+    public function main(): View
     {
-        return view('index', []);
+        return view('main', []);
     }
 
     public function music(): View
     {
-        return view('pages/music', []);
+        return view('main/music', []);
     }
 
     public function art(): View
     {
-        $tags = Tag::where('type', 'art')
-           ->get();
-        return view('pages/art', ['tags' => $tags]);
+        $tags = Tag::where('type', 'art')->get();
+        return view('main/art', ['tags' => $tags]);
     }
 
     public function projects(): View
     {
-        return view('pages/projects', []);
+        return view('main/projects', []);
     }
 
     public function about(): View
     {
-        return view('pages/about', []);
+        return view('main/about', []);
     }
 }

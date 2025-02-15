@@ -1,9 +1,6 @@
-@extends('main')
+@extends('master')
 
 @section('content')
-   @foreach ($tags as $tag)
-      <x-TagFilter label="{{ $tag->handle }}" value="{{ $tag->handle }}" />
-   @endforeach
 @endsection
 
 @section('footer')
