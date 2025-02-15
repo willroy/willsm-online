@@ -16,7 +16,6 @@ class HomeButton extends Component
         public string $img,
         public string $href,
         public string $fontsize,
-        public string $delay,
     ) {}
 
     /**

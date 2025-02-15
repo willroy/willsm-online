@@ -22,38 +22,27 @@
   <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
       <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-        <div class="relative sm:w-[850px] w-full px-6">
-          <header class="grid grid-flow-col auto-cols-max md:auto-cols-min">
-             @yield('header')
-          </header>
-
-          <main class="mt-12 px-8">
-            @yield('content')
-          </main>
-
-          <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-            @yield('footer')
-
+        <div class="relative xl:w-[1250px] w-full px-6">
+          <header class="@if(Request::url() != url('/') || Auth::check())h-[6rem]@endif flex justify-center items-center">
             @if (Auth::check())
-              <br><br>
-              <h1>Welcome, {{ Auth::user()->name }}</h1>
-              <h1>Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</h1>
-              <h1>DB: {{ config('services.db.name') }}
-              <br>
-              <br>
-              <nav class="flex items-center justify-center gap-2">
               <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <button type="submit" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Logout</button>
+                <button type="submit" class="mx-2 float-right bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Logout</button>
               </form>
-              @if(Request::url() == url('/'))
-                <a href="{{ route('media.index') }}" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded">Media</a>
-              @else
-                <a href="{{ route('main') }}" class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded">Home</a>
-              @endif
-            </nav>
+              <a href="{{ route('media.index') }}" class="mx-2 float-right bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded">Media</a>
             @endif
-
+            @if(Request::url() != url('/') || Auth::check())
+              <a href="{{ route('main') }}" class="mx-2 float-right bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded">Home</a>
+            @endif
+            @yield('header')
+          </header>
+          @if(Request::url() != url('/') || Auth::check())<hr>@endif
+          <br><br>
+          <main class="px-8">
+            @yield('content')
+          </main>
+          <footer class="py-8 text-center text-sm text-black dark:text-white/70">
+            @yield('footer')
           </footer>
         </div>
       </div>

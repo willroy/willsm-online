@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 use App\Models\Tag;
+use App\Models\MediaItem;
 
 class MainController extends Controller
 {
@@ -22,7 +23,8 @@ class MainController extends Controller
     public function art(): View
     {
         $tags = Tag::where('type', 'art')->get();
-        return view('main/art', ['tags' => $tags]);
+        $mediaItems = MediaItem::where('type', 'art')->get();
+        return view('main/art', ['tags' => $tags, 'mediaItems' => $mediaItems]);
     }
 
     public function projects(): View
