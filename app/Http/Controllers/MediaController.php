@@ -46,8 +46,10 @@ class MediaController extends Controller
         return redirect()->route('media.index');
     }
 
-    public function delete($id): View
+    public function delete($id)
     {
-        return view('media/index', []);
+        $mediaItem = MediaItem::findOrFail($id);
+        $mediaItem->delete();
+        return redirect()->route('media.index');
     }
 }
