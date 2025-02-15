@@ -1,17 +1,9 @@
 @extends('main')
 
 @section('content')
-    <x-TagFilter label="pencil" value="pencil" />
-    <x-TagFilter label="ink" value="ink" />
-    <x-TagFilter label="digital" value="digital" />
-    <x-TagFilter label="character" value="character" />
-    <x-TagFilter label="animal" value="animal" />
-    <x-TagFilter label="enviroment" value="enviroment" />
-    <x-TagFilter label="referenced" value="referenced" />
-    <x-TagFilter label="imagination" value="imagination" />
-    <x-TagFilter label="sketch" value="sketch" />
-    <x-TagFilter label="portait" value="portait" />
-    <x-TagFilter label="landscape" value="landscape" />
+   @foreach ($tags as $tag)
+      <x-TagFilter label="{{ $tag->handle }}" value="{{ $tag->handle }}" />
+   @endforeach
 @endsection
 
 @section('footer')

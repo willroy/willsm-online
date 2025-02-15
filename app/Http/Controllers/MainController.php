@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
+use App\Models\Tag;
+
 class MainController extends Controller
 {
     public function index(): View
@@ -19,7 +21,9 @@ class MainController extends Controller
 
     public function art(): View
     {
-        return view('pages/art', []);
+        $tags = Tag::where('type', 'art')
+           ->get();
+        return view('pages/art', ['tags' => $tags]);
     }
 
     public function projects(): View
