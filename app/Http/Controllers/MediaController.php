@@ -28,19 +28,30 @@ class MediaController extends Controller
 
     public function save($id = null)
     {
-        $image = request()->image;
+        // if error on size limit for file upload need to change php.ini on server
+
+        $uploaded = request()->uploaded;
         $type = request()->type;
 
-        request()->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        if ( $type == "art" ) {
+            request()->validate([
+                'uploaded' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+        } elseif ( $type == "music" ) {
+            // request()->validate([
+            //     'uploaded' => 'required|video|mimes:mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:100040',
+            // ]);
+        }
 
-        $imageName = time().'.'.$image->getClientOriginalExtension();
-        $image->move(public_path('images'), $imageName);
+        $uploadedName = time().'.'.$uploaded->getClientOriginalExtension();
+        if ( $type == "art" ) { $uploaded->move(public_path('images'), $uploadedName); }
+        if ( $type == "music" ) { $uploaded->move(public_path('videos'), $uploadedName); }
 
         $mediaItem = new MediaItem;
         $mediaItem->type = $type;
-        $mediaItem->path = 'images/' . $imageName;
+        if ( $type == "art" ) { $mediaItem->path = 'images/' . $uploadedName; }
+        if ( $type == "music" ) { $mediaItem->path = 'videos/' . $uploadedName; }
+        
         $mediaItem->save();
 
         return redirect()->route('media.index');
