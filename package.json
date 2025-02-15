@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.7.2",
-        "github-contributions-counter": "^2.1.7"
+        "github-contributions-counter": "^2.1.7",
+        "jquery": "^3.7.1"
     }
 }

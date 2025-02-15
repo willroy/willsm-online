@@ -14,6 +14,21 @@ class MainController extends Controller
 
     public function music(): View
     {
-        return view('music', []);
+        return view('pages/music', []);
+    }
+
+    public function art(): View
+    {
+        return view('pages/art', []);
+    }
+
+    public function projects(): View
+    {
+        return view('pages/projects', []);
+    }
+
+    public function about(): View
+    {
+        return view('pages/about', []);
     }
 }
