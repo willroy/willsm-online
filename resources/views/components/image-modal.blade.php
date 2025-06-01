@@ -18,7 +18,7 @@
   function showModal(imgPath) {
      $('#imagemodalback').show();
      $('#imagemodal').show();
-     $('#imagemodalcontent').html("<img class='max-h-screen' src="+imgPath+" />");
+     $('#imagemodalcontent').html("<img class='max-h-[calc(100vh-74px)]' src="+imgPath+" />");
   }
 
   function hideModal() {

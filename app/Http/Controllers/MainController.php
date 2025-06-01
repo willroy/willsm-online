@@ -27,9 +27,9 @@ class MainController extends Controller
         return view('main/art', ['tags' => $tags, 'mediaItems' => $mediaItems]);
     }
 
-    public function projects(): View
+    public function software(): View
     {
-        return view('main/projects', []);
+        return view('main/software', []);
     }
 
     public function about(): View

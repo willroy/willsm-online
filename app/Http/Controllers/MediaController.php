@@ -28,14 +28,18 @@ class MediaController extends Controller
 
     public function save($id = null)
     {
-        // if error on size limit for file upload need to change php.ini on server
+        // if error on size limit for file upload need to change php.ini on server, will be one of these:
+        // memory_limit
+        // upload_max_filesize
+        // post_max_size
+
 
         $uploaded = request()->uploaded;
         $type = request()->type;
 
         if ( $type == "art" ) {
             request()->validate([
-                'uploaded' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'uploaded' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
             ]);
         } elseif ( $type == "music" ) {
             // request()->validate([
