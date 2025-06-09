@@ -15,3 +15,5 @@ Route::get('/media/view/{id}', [App\Http\Controllers\MediaController::class, 'vi
 Route::get('/media/edit/{id?}', [App\Http\Controllers\MediaController::class, 'edit'])->name('media.edit')->middleware('auth');
 Route::post('/media/save/{id?}', [App\Http\Controllers\MediaController::class, 'save'])->name('media.save')->middleware('auth');
 Route::get('/media/delete/{id}', [App\Http\Controllers\MediaController::class, 'delete'])->name('media.delete')->middleware('auth');
+Route::get('/media/upload', [App\Http\Controllers\MediaController::class, 'upload'])->name('media.upload')->middleware('auth');
+Route::post('/media/uploadsave', [App\Http\Controllers\MediaController::class, 'uploadsave'])->name('media.uploadsave')->middleware('auth');

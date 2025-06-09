@@ -14,19 +14,28 @@
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
       @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
-
-    @stack("tagscript")
   </head>
-  <body class="font-sans antialiased background">
+  <body class="font-sans antialiased notebook_theme-body">
     <div class="m-8">
-      <div class="md:grid md:grid-cols-4 md:gap-8">
-        <div>
+      <div class="flex flex-col md:flex-row">
+        <div class="shrink md:mr-8">
           @include('sidebar')
+          <div>
+            @include('themeswitcher')
+          </div>
         </div>
-        <div class="md:col-span-3 md:mt-0 mt-8 border border-solid border-black">
+        <div class="grow md:mt-0 mt-8 border border-solid border-black">
           @yield('content')
         </div>
       </div>
     </div>
+    <script>
+      function switchTheme(theme) {
+        $('body').removeClass("notebook_theme-body");
+        $('body').removeClass("beige_theme-body");
+        $('body').removeClass("pastel_theme-body");
+        $('body').addClass(theme+"-body");
+      }
+    </script>
   </body>
 </html>

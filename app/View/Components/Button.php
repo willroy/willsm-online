@@ -8,20 +8,22 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
-    public $classes;
     public $label;
     public $href;
-    public $colour;
+    public $onclick;
+    public $classes;
+    public $container_classes;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($classes = '', $label, $href, $colour)
+    public function __construct($label, $href, $onclick = '', $classes = '', $container_classes = '')
     {
-       $this->classes = $classes;
        $this->label = $label;
        $this->href = $href;
-       $this->colour = $colour;
+       $this->onclick = $onclick;
+       $this->classes = $classes;
+       $this->container_classes = $container_classes;
     }
 
     /**
