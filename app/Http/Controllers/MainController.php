@@ -12,7 +12,9 @@ class MainController extends Controller
 {
     public function main(): View
     {
-        return view('main', []);
+        $mediaItems = MediaItem::where('type', 'art')->orderBy('created_at', 'desc')->take(3)->get();
+
+        return view('main/home', ['mediaItems' => $mediaItems]);
     }
 
     public function music(): View
