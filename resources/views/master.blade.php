@@ -18,10 +18,10 @@
     @yield('extra-head')
   </head>
   <body class="font-sans antialiased default_theme-body">
-    <div class="m-8">
+    <div class="xl:mx-96 xl:my-32 m-4">
       <div class="flex flex-col md:flex-row">
         <div class="shrink md:mr-8">
-          @include('sidebar')
+          @include('sidebar', ['page' => $page ?? null])
           <div>
             @include('themeswitcher')
           </div>

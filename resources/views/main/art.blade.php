@@ -1,9 +1,11 @@
+@php $page = "art" @endphp
+
 @extends('master')
 
 @section('content')
 
 <div class="content-banner p-4">
-    <h1 class="text-xl">Art > > > > > ></h1>
+    <h1 class="text-xl">Art</h1>
 </div>
 <hr>
 <div class="m-4">

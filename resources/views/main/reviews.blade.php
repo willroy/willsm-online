@@ -1,19 +1,19 @@
+@php $page = "reviews" @endphp
+
 @extends('master')
 
 @section('content')
 
 <div class="content-banner p-4">
-	<h1 class="text-xl">Reviews > > > > > ></h1>
+	<h1 class="text-xl">Reviews</h1>
 </div>
 <hr>
 <div class="m-4">
-	<x-ReviewSection img="" handle="minecraft" name="Minecraft" desc="Great game, probably the game i've put the most hours into, can't complain about anything because the game is all about what you make of it."/>
-
 	<x-ReviewSection img="images-persistent/factorio.jpg" handle="factorio" name="Factorio" desc="Addictive gameplay loop and very satisfying seeing the work you've put into a working factory. Great developers and mods are great as well. Spearheading the automation game genre."/>
 
 	<x-ReviewSection img="images-persistent/celeste.jpg" handle="celeste" name="Celeste" desc="Awesome platformer but very hard. Probably the first game I have played that was specifically designed to be hard, and I got really hooked into it. Also the speedrunnning scene around this game is great."/>
 
-	<x-ReviewSection img="" handle="dq9" name="Dragon Quest IX: Sentinels of the Starry Skies" desc="Best RPG on the planet, come back to it every now and again, just love the overall style / gameplay of it. Can be a bit grindy if you don't use gold mail trick to make money."/>
+	<x-ReviewSection img="images-persistent/dq9.png" handle="dq9" name="Dragon Quest IX" desc="Best RPG on the planet, come back to it every now and again, just love the overall style / gameplay of it. Can be a bit grindy if you don't use gold mail trick to make money."/>
 
 	<x-ReviewSection img="images-persistent/ultrakill.jpg" handle="ultrakill" name="Ultrakill" desc="Best shooter i've played. There are so many cool details and mechanics that work well together. Fast paced difficult shooter with lots of character mobility, cool weapons (Such as The Marksman Revolver which launches a coin that redirects any shots into nearest enemy). Couldnt reccommend enough for people who like shooters or even people who don't like traditional shooters."/>
 	
@@ -23,11 +23,13 @@
 
 	<x-ReviewSection img="images-persistent/outer.jpg" handle="outer" name="Outer Wilds" desc="AWESOME. Space exploration - Discovering information about a long lost species - Cool mechanics. Great game and if you play it, go into it without any knowledge and don't look stuff up. If you can't figure out something, go somewhere else. Great display of knowledge is power as most of the puzzles you can do if you know something"/>
 
-	<x-ReviewSection img="images-persistent/satisfactory.jpg" handle="satisfactory" name="Satsifactory" desc="Factorio but 3d, a bit less focused on super big builds and big factories, because of the performance limitations of it being first person 3d and having good graphics. Love it, really nice implementation and puts a nice twist on the style of automation game that factorio pioneered."/>
+	<x-ReviewSection img="images-persistent/minecraft.png" handle="minecraft" name="Minecraft" desc="Great game, probably the game i've put the most hours into, can't complain about anything because the game is all about what you make of it."/>
+
+	<x-ReviewSection img="images-persistent/satisfactory.jpg" handle="satisfactory" name="Satsifactory" desc="Lets be honest, factorio will always be the OG in this style of game. But satisfactory, while more limiting in some aspects of pure efficiency and scalability that factorio handles well, satisfactory puts a nice twist and its own personality into this style of game. It focuses a lot more on a well rounded experience of automation, exploration, factory design and story."/>
 
 	<x-ReviewSection img="images-persistent/firewatch.jpg" handle="firewatch" name="Firewatch" desc="Great and (fairly) short game, with a good story. The character dynamics and interactions are fun. People complain about the ending but I think its a great ending."/>
 
-	<x-ReviewSection img="" handle="randc" name="Ratchet & Clank" desc="AMAZING run and gun 3rd person shooter game series, my favourite part being the cool variety in weapons you can get and the story / style. Rift Apart is maybe the best looking game i've ever seen. First r&c game is really difficult."/>
+	<x-ReviewSection img="images-persistent/randc.png" handle="randc" name="Ratchet & Clank" desc="AMAZING run and gun 3rd person shooter game series, my favourite part being the cool variety in weapons you can get and the story / style. Rift Apart is maybe the best looking game i've ever seen. First r&c game is really difficult."/>
 
 	<x-ReviewSection img="images-persistent/omori.jpg" handle="omori" name="Omori" desc="Amazing story, awesome rpg elements and battling system. Worth a play through and don't look up spoilers."/>
 
