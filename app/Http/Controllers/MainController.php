@@ -7,6 +7,9 @@ use Illuminate\View\View;
 
 use App\Models\Tag;
 use App\Models\MediaItem;
+use App\Models\BlogItem;
+
+use League\CommonMark\CommonMarkConverter;
 
 class MainController extends Controller
 {
@@ -15,6 +18,19 @@ class MainController extends Controller
         $mediaItems = MediaItem::where('type', 'art')->orderBy('created_at', 'desc')->take(3)->get();
 
         return view('main/home', ['mediaItems' => $mediaItems]);
+    }
+
+    public function blog(): View
+    {
+        $blogs = BlogItem::get();
+
+        $converter = new CommonMarkConverter();
+
+        foreach ($blogs as $blog) {
+            $blog->content_html = $converter->convertToHtml($blog->content);
+        }
+
+        return view('main.blog', ['blogs' => $blogs]);
     }
 
     public function music(): View
@@ -26,6 +42,7 @@ class MainController extends Controller
     {
         $tags = Tag::where('type', 'art')->get();
         $mediaItems = MediaItem::where('type', 'art')->get();
+
         return view('main/art', ['tags' => $tags, 'mediaItems' => $mediaItems]);
     }
 

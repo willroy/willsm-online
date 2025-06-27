@@ -2,16 +2,14 @@
 
 @section('content')
     <div class="m-4">
-        <div class="flex justify-between">
-            <div>
+        <div class="flex justify-between mb-2">
+            <div class="flex">
                 @foreach ($tags as $tag)
-                    <x-TagFilter label="{{ $tag->handle }}" value="{{ $tag->handle }}" />
+                    <x-Button classes="" label="{{ $tag->handle }}" value="{{ $tag->handle }}"/>
                 @endforeach
             </div>
             @if (Auth::check())
-                <div class="mt-0 mb-2">
-                    <x-Button href="{{ route('media.upload') }}" label="Upload"/>
-                </div>
+                <x-Button classes="" href="{{ route('media.upload') }}" label="Upload"/>
             @endif
         </div>
         <hr>

@@ -14,8 +14,10 @@
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
       @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
+
+    @yield('extra-head')
   </head>
-  <body class="font-sans antialiased notebook_theme-body">
+  <body class="font-sans antialiased default_theme-body">
     <div class="m-8">
       <div class="flex flex-col md:flex-row">
         <div class="shrink md:mr-8">
@@ -24,14 +26,14 @@
             @include('themeswitcher')
           </div>
         </div>
-        <div class="grow md:mt-0 mt-8 border border-solid border-black">
+        <div class="content grow md:mt-0 mt-8 border border-solid border-black">
           @yield('content')
         </div>
       </div>
     </div>
     <script>
       function switchTheme(theme) {
-        $('body').removeClass("notebook_theme-body");
+        $('body').removeClass("default_theme-body");
         $('body').removeClass("beige_theme-body");
         $('body').removeClass("pastel_theme-body");
         $('body').addClass(theme+"-body");

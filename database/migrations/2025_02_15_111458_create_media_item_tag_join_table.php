@@ -26,5 +26,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('media_item_tag_join');
+        Schema::dropIfExists('media_item_tag');
     }
 };
