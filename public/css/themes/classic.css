@@ -1,0 +1,45 @@
+.theme-classic-body {
+    background-color: #ebe4d9;
+    color: #FFFFFF;
+}
+
+.theme-classic-body .border {
+    border-style: dotted;
+    border-width: 2px;
+    border-color: rgb(201, 190, 190);
+}
+
+.theme-classic-body .button {
+    background-color: #FFFFFF;
+    color: #3d0000;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-classic-body .button-selected {
+    background-color: #b5493a;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-classic-body .blog-item {
+    background-color: #FFFFFF;
+    color: #3d0000;
+}
+
+.theme-classic-body .sidebar {
+    background-color: #753838;
+    color: #FFFFFF;
+}
+
+.theme-classic-body .content {
+    background-color: #753838;
+    color: #FFFFFF;
+}
+
+.theme-classic-body .content-banner {
+    background-color: #753838;
+    color: #FFFFFF;
+    font-weight: bold;
+}

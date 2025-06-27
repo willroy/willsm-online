@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Log;
 
 use App\Models\Tag;
 use App\Models\MediaItem;
 use App\Models\BlogItem;
+
+use Cookie;
 
 use League\CommonMark\CommonMarkConverter;
 

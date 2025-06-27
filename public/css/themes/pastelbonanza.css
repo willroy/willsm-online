@@ -1,0 +1,20 @@
+.theme-pastelbonanza-body {
+    background-color: #F0A6CA;
+    color: #822E81;
+}
+
+.theme-pastelbonanza-body .border {
+    border-style: dotted;
+    border-width: 3px;
+    border-color: #F2F8DB;
+}
+
+.theme-pastelbonanza-body .border button {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-pastelbonanza-body .border a {
+    border-style: solid;
+    border-width: 1px;
+}

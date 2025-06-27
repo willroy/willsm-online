@@ -15,10 +15,18 @@
       @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 
+    <link href="{{ asset('css/themes/newgeneration.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/classic.css') }}" rel="stylesheet">
+<!--     <link href="{{ asset('css/themes/catppiccinlatte.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/oshawatt.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/eink.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/base2tonedesert.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/themes/pastelbonanza.css') }}" rel="stylesheet">
+
     @yield('extra-head')
   </head>
-  <body class="font-sans antialiased default_theme-body">
-    <div class="xl:mx-96 xl:my-32 m-4">
+  <body class="font-sans antialiased theme-{{ Cookie::get('theme') }}-body">
+    <div class="xl:mx-[25%] xl:my-32 lg:mx-[10%] lg:my-16 m-4">
       <div class="flex flex-col md:flex-row">
         <div class="shrink md:mr-8">
           @include('sidebar', ['page' => $page ?? null])
@@ -33,10 +41,29 @@
     </div>
     <script>
       function switchTheme(theme) {
-        $('body').removeClass("default_theme-body");
-        $('body').removeClass("beige_theme-body");
-        $('body').removeClass("pastel_theme-body");
-        $('body').addClass(theme+"-body");
+        console.log("switching to theme "+theme)
+
+        $('body').removeClass("theme-newgeneration-body");
+        $('body').removeClass("theme-classic-body");
+        $('body').removeClass("theme-catppiccinlatte-body");
+        $('body').removeClass("theme-oshawatt-body");
+        $('body').removeClass("theme-eink-body");
+        $('body').removeClass("theme-base2tonedesert-body");
+        $('body').removeClass("theme-pastelbonanza-body");
+        $('body').addClass("theme-"+theme+"-body");
+
+        $.ajax({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          url : "{{ url('/themeSwitch') }}",
+          data : {'theme' : theme},
+          type : 'GET',
+          dataType : 'json',
+          success : function(result) {
+            console.log(result);
+          }
+        });
       }
     </script>
   </body>

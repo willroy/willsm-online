@@ -25,3 +25,5 @@ Route::get('/blog/view/{id}', [App\Http\Controllers\BlogController::class, 'view
 Route::get('/blog/edit/{id?}', [App\Http\Controllers\BlogController::class, 'edit'])->name('blog.edit')->middleware('auth');
 Route::post('/blog/save/{id?}', [App\Http\Controllers\BlogController::class, 'save'])->name('blog.save')->middleware('auth');
 Route::get('/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'delete'])->name('blog.delete')->middleware('auth');
+
+Route::get('/themeSwitch',	[App\Http\Controllers\AjaxController::class, 'themeSwitch']);
