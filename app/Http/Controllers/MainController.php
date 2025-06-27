@@ -44,9 +44,11 @@ class MainController extends Controller
         return view('main.blog', ['blogs' => $blogs]);
     }
 
-    public function music(): View
+    public function media(): View
     {
-        return view('main/music', []);
+        $videos = MediaItem::where('type', 'media')->get();
+
+        return view('main/media', ['videos' => $videos]);
     }
 
     public function reviews(): View

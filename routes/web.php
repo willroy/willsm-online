@@ -6,7 +6,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\MainController::class, 'main'])->name('main');
 Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
-Route::get('/music', [App\Http\Controllers\MainController::class, 'music'])->name('music');
+Route::get('/media', [App\Http\Controllers\MainController::class, 'media'])->name('media');
 Route::get('/art', [App\Http\Controllers\MainController::class, 'art'])->name('art');
 Route::get('/reviews', [App\Http\Controllers\MainController::class, 'reviews'])->name('reviews');
 Route::get('/places', [App\Http\Controllers\MainController::class, 'places'])->name('places');
