@@ -3,8 +3,10 @@
   <x-Button label="Blog" href="{{ route('blog') }}"/>
   <x-Button label="Music" href="{{ route('music') }}"/>
   <x-Button label="Art" href="{{ route('art') }}"/>
-  <x-Button label="About" href="{{ route('about') }}"/>
+  <x-Button label="Reviews" href="{{ route('reviews') }}"/>
+  <x-Button label="Places" href="{{ route('places') }}"/>
   <x-Button label="Software" href="{{ route('software') }}"/>
+  <x-Button label="About" href="{{ route('about') }}"/>
 
   @if (Auth::check())
     <form method="POST" action="{{ route('logout') }}">

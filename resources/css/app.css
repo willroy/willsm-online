@@ -1,4 +1,4 @@
-@import "@fortawesome/fontawesome-free/css/all.css";
+@import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,13 +45,19 @@
 }
 
 .default_theme-body .sidebar {
-    background-color: #753838;
+    background-color: #a13939;
     color: #FFFFFF;
 }
 
 .default_theme-body .content {
-    background-color: #753838;
+    background-color: #a13939;
     color: #FFFFFF;
+}
+
+.default_theme-body .content-banner {
+    background-color: #F6AA1C;
+    color: #000000;
+    font-weight: bold;
 }
 
 /*

@@ -17,7 +17,15 @@ class MainController extends Controller
     {
         $mediaItems = MediaItem::where('type', 'art')->orderBy('created_at', 'desc')->take(3)->get();
 
-        return view('main/home', ['mediaItems' => $mediaItems]);
+        $blogs = BlogItem::orderBy('created_at', 'desc')->take(3)->get();;
+
+        $converter = new CommonMarkConverter();
+
+        foreach ($blogs as $blog) {
+            $blog->content_html = $converter->convertToHtml($blog->content);
+        }
+
+        return view('main/home', ['mediaItems' => $mediaItems, 'blogs' => $blogs]);
     }
 
     public function blog(): View
@@ -36,6 +44,16 @@ class MainController extends Controller
     public function music(): View
     {
         return view('main/music', []);
+    }
+
+    public function reviews(): View
+    {
+        return view('main/reviews', []);
+    }
+
+    public function places(): View
+    {
+        return view('main/places', []);
     }
 
     public function art(): View

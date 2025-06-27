@@ -8,6 +8,8 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'main'])->name('mai
 Route::get('/blog', [App\Http\Controllers\MainController::class, 'blog'])->name('blog');
 Route::get('/music', [App\Http\Controllers\MainController::class, 'music'])->name('music');
 Route::get('/art', [App\Http\Controllers\MainController::class, 'art'])->name('art');
+Route::get('/reviews', [App\Http\Controllers\MainController::class, 'reviews'])->name('reviews');
+Route::get('/places', [App\Http\Controllers\MainController::class, 'places'])->name('places');
 Route::get('/software', [App\Http\Controllers\MainController::class, 'software'])->name('software');
 Route::get('/about', [App\Http\Controllers\MainController::class, 'about'])->name('about');
 

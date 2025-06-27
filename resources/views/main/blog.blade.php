@@ -2,6 +2,10 @@
 
 @section('content')
 
+<div class="content-banner p-4">
+	<h1 class="text-xl">Blog > > > > > ></h1>
+</div>
+<hr>
 <div class="m-4">
 	<div class="float-right">
         @if (Auth::check())
