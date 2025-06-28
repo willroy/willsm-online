@@ -31,12 +31,12 @@ class MediaController extends Controller
             $extension = $file->getClientOriginalExtension();
 
             if ( $type == "art" ) { $file->move(public_path('images'), $filename); }
-            if ( $type == "music" ) { $file->move(public_path('videos'), $filename); }
+            if ( $type == "media" ) { $file->move(public_path('videos'), $filename); }
 
             $mediaItem = new MediaItem;
             $mediaItem->type = $type;
             if ( $type == "art" ) { $mediaItem->path = 'images/' . $filename; }
-            if ( $type == "music" ) { $mediaItem->path = 'videos/' . $filename; }
+            if ( $type == "media" ) { $mediaItem->path = 'videos/' . $filename; }
             $mediaItem->save();
         }
 
@@ -65,12 +65,12 @@ class MediaController extends Controller
 
         $uploadedName = time().'.'.$uploaded->getClientOriginalExtension();
         if ( $type == "art" ) { $uploaded->move(public_path('images'), $uploadedName); }
-        if ( $type == "music" ) { $uploaded->move(public_path('videos'), $uploadedName); }
+        if ( $type == "media" ) { $uploaded->move(public_path('videos'), $uploadedName); }
 
         $mediaItem = new MediaItem;
         $mediaItem->type = $type;
         if ( $type == "art" ) { $mediaItem->path = 'images/' . $uploadedName; }
-        if ( $type == "music" ) { $mediaItem->path = 'videos/' . $uploadedName; }
+        if ( $type == "media" ) { $mediaItem->path = 'videos/' . $uploadedName; }
         
         $mediaItem->save();
 
