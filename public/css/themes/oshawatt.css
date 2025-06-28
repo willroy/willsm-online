@@ -1,0 +1,45 @@
+.theme-oshawatt-body {
+    background-color: #dddddd;
+    color: #000000;
+}
+
+.theme-oshawatt-body .border {
+    border-style: inset;
+    border-width: 5px;
+    border-color: #77ddee;
+}
+
+.theme-oshawatt-body .button {
+    background-color: #FFFFFF;
+    color: #4e0f0f;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-oshawatt-body .button-selected {
+    background-color: #77ddee;
+    color: #1a1a1a;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-oshawatt-body .blog-item {
+    background-color: #FFFFFF;
+    color: #4e0f0f;
+}
+
+.theme-oshawatt-body .sidebar {
+    background-color: #448899;
+    color: #FFFFFF;
+}
+
+.theme-oshawatt-body .content {
+    background-color: #448899;
+    color: #FFFFFF;
+}
+
+.theme-oshawatt-body .content-banner {
+    background-color: #77ddee;
+    color: #1a1a1a;
+    font-weight: bold;
+}
