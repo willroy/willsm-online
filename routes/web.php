@@ -27,3 +27,5 @@ Route::post('/blog/save/{id?}', [App\Http\Controllers\BlogController::class, 'sa
 Route::get('/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'delete'])->name('blog.delete')->middleware('auth');
 
 Route::get('/themeSwitch',	[App\Http\Controllers\AjaxController::class, 'themeSwitch']);
+
+Route::get('/factscat/index',	[App\Http\Controllers\FactscatController::class, 'index'])->name('factscat.index');

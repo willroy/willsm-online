@@ -38,8 +38,29 @@
     color: #dcd5d0;
 }
 
+.theme-base2tonedesert-body .popup {
+    background-color: #5c523d;
+    color: #dcd5d0;
+}
+
 .theme-base2tonedesert-body .content-banner {
     background-color: #e58748;
     color: #1a1a1a;
     font-weight: bold;
+}
+
+.theme-base2tonedesert-body .awe-button {
+    border-width: 3px;
+    border-style: outset;
+    border-color: #000;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.theme-base2tonedesert-body .awe-button:hover {
+    border-width: 3px;
+    border-style: inset;
+    border-color: #FFF;
+    border-top-color: #000;
+    border-left-color: #000;
 }

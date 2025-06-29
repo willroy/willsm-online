@@ -39,8 +39,29 @@
     color: #7e8663;
 }
 
+.theme-pastelbonanza-body .popup {
+    background-color: #E9EDC9;
+    color: #7e8663;
+}
+
 .theme-pastelbonanza-body .content-banner {
     background-color: #bed88d;
     color: #1a1a1a;
     font-weight: bold;
+}
+
+.theme-pastelbonanza-body .awe-button {
+    border-width: 3px;
+    border-style: outset;
+    border-color: #000;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.theme-pastelbonanza-body .awe-button:hover {
+    border-width: 3px;
+    border-style: inset;
+    border-color: #FFF;
+    border-top-color: #000;
+    border-left-color: #000;
 }

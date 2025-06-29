@@ -3,11 +3,26 @@
 @extends('master')
 
 @section('content')
-    
+
+
+<div class="absolute bottom-[30rem] -right-[15rem] hidden xl:block z-20 border">
+	<div class="content-banner p-2">
+		<p>Facts Cat</p>
+	</div>
+	<a class="w-[350px] float-right popup shadow-2xl" href="{{ route('factscat.index') }}">
+		<img src="{{ asset('images-persistent/journalist.png') }}">
+		<p class="absolute top-[50px] right-[20px] font-bold">Hello! I'm journalism cat!!</p>
+		<p class="absolute top-[80px] right-[20px] font-bold">Click me to help me</p>
+		<p class="absolute top-[110px] right-[20px] font-bold"> learn every fact!</p>
+	</a>
+</div>
+
 <div class="content-banner p-4">
 	<h1 class="text-xl">Home</h1>
 </div>
+
 <hr>
+
 <div class="m-4">
 	<h1 class="text-5xl mb-2">Welcome!!!!</h1>
 	<hr>
@@ -24,5 +39,21 @@
 </div>
 
 <x-ImageModal />
+
+@endsection
+
+@section('content-extra')
+
+<div class="xl:hidden border my-8 md:w-[350px] float-right">
+	<div class=" content-banner p-2">
+		<p>Facts Cat</p>
+	</div>
+	<a class="popup relative" href="{{ route('factscat.index') }}">
+		<img src="{{ asset('images-persistent/journalist.png') }}">
+		<p class="absolute top-[10px] right-[20px] font-bold">Hello! I'm journalism cat!!</p>
+		<p class="absolute top-[40px] right-[20px] font-bold">Click me to help me</p>
+		<p class="absolute top-[70px] right-[20px] font-bold"> learn every fact!</p>
+	</a>
+</div>
 
 @endsection

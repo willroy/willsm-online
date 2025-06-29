@@ -38,8 +38,29 @@
     color: #FFFFFF;
 }
 
+.theme-oshawatt-body .popup {
+    background-color: #448899;
+    color: #FFFFFF;
+}
+
 .theme-oshawatt-body .content-banner {
     background-color: #77ddee;
     color: #1a1a1a;
     font-weight: bold;
+}
+
+.theme-oshawatt-body .awe-button {
+    border-width: 3px;
+    border-style: outset;
+    border-color: #000;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.theme-oshawatt-body .awe-button:hover {
+    border-width: 3px;
+    border-style: inset;
+    border-color: #FFF;
+    border-top-color: #000;
+    border-left-color: #000;
 }

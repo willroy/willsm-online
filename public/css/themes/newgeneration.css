@@ -38,8 +38,32 @@
     color: #FFFFFF;
 }
 
+.theme-newgeneration-body .popup {
+    background-color: #a13939;
+    color: #FFFFFF;
+    border-color: #F6AA1C;
+    border-style: solid;
+    border-width: 5px;
+}
+
 .theme-newgeneration-body .content-banner {
     background-color: #F6AA1C;
     color: #1a1a1a;
     font-weight: bold;
+}
+
+.theme-newgeneration-body .awe-button {
+    border-width: 3px;
+    border-style: outset;
+    border-color: #000;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.theme-newgeneration-body .awe-button:hover {
+    border-width: 3px;
+    border-style: inset;
+    border-color: #FFF;
+    border-top-color: #000;
+    border-left-color: #000;
 }

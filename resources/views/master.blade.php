@@ -33,10 +33,11 @@
             @include('themeswitcher')
           </div>
         </div>
-        <div class="content grow md:mt-0 mt-8 border border-solid border-black">
+        <div class="content grow md:mt-0 mt-8 border border-solid border-black relative">
           @yield('content')
         </div>
       </div>
+      @yield('content-extra')
     </div>
     <script>
       function switchTheme(theme, btn) {
