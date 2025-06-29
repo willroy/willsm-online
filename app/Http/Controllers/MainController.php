@@ -18,9 +18,9 @@ class MainController extends Controller
 {
     public function main(): View
     {
-        $mediaItems = MediaItem::where('type', 'art')->orderBy('created_at', 'desc')->take(3)->get();
+        $mediaItems = MediaItem::where('type', 'art')->orderBy('created_at', 'desc')->take(1)->get();
 
-        $blogs = BlogItem::orderBy('created_at', 'desc')->take(3)->get();;
+        $blogs = BlogItem::orderBy('created_at', 'desc')->take(1)->get();;
 
         $converter = new CommonMarkConverter();
 
