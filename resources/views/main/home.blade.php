@@ -35,7 +35,7 @@
 	</div>
 	<hr>
 	<h1 class="text-3xl my-4">Recent Art</h1>
-	<x-ImageList :images="$mediaItems"/>
+	<x-ImageList :images="$mediaItems" maxItems="3"/>
 </div>
 
 <x-ImageModal />

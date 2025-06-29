@@ -9,13 +9,15 @@ use Illuminate\Database\Eloquent\Collection;
 
 class ImageList extends Component
 {
+    public $maxItems;
+    public Collection $images;
     /**
      * Create a new component instance.
      */
-    public function __construct
-    (
-        public Collection $images,
-    ) {}
+    public function __construct( $images, $maxItems = '5' ) {
+       $this->images = $images;
+       $this->maxItems = $maxItems;
+    }
 
     /**
      * Get the view / contents that represent the component.
