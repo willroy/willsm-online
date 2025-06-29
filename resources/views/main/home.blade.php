@@ -44,16 +44,20 @@
 
 @section('content-extra')
 
-<div class="xl:hidden border my-8 md:w-[350px] float-right">
-	<div class=" content-banner p-2">
+<div class="xl:hidden border my-8 md:w-[350px] float-right relative">
+	<div class="content-banner p-2">
 		<p>Facts Cat</p>
 	</div>
-	<a class="popup relative" href="{{ route('factscat.index') }}">
-		<img src="{{ asset('images-persistent/journalist.png') }}">
-		<p class="absolute top-[10px] right-[20px] font-bold">Hello! I'm journalism cat!!</p>
-		<p class="absolute top-[40px] right-[20px] font-bold">Click me to help me</p>
-		<p class="absolute top-[70px] right-[20px] font-bold"> learn every fact!</p>
-	</a>
+	<div class="p-2 relative popup">
+		<a href="{{ route('factscat.index') }}">
+			<div class="absolute top-[10px] right-[10px]">
+				<p class="font-bold">Hello! I'm journalism cat!!</p>
+				<p class="font-bold">Click me to help me</p>
+				<p class="font-bold"> learn every fact!</p>
+			</div>
+			<img src="{{ asset('images-persistent/journalist.png') }}">
+		</a>
+	</div>
 </div>
 
 @endsection
