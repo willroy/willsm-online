@@ -12,15 +12,17 @@
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-      @vite(['resources/css/app.css', 'resources/js/app.js'])
+      @vite([
+        'resources/css/app.css',
+        'resources/js/app.js',
+        'resources/css/themes/newgeneration.css',
+        'resources/css/themes/classic.css',
+        'resources/css/themes/catppiccinlatte.css',
+        'resources/css/themes/oshawatt.css',
+        'resources/css/themes/base2tonedesert.css',
+        'resources/css/themes/pastelbonanza.css'
+        ])
     @endif
-
-    <link href="{{ asset('css/themes/newgeneration.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/classic.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/catppiccinlatte.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/oshawatt.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/base2tonedesert.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/pastelbonanza.css') }}" rel="stylesheet">
 
     @yield('extra-head')
   </head>
