@@ -15,12 +15,12 @@
       @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 
-    <link href="{{ asset('css/themes/newgeneration.css?v=1') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/classic.css?v=1') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/catppiccinlatte.css?v=1') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/oshawatt.css?v=1') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/base2tonedesert.css?v=1') }}" rel="stylesheet">
-    <link href="{{ asset('css/themes/pastelbonanza.css?v=1') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/newgeneration.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/classic.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/catppiccinlatte.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/oshawatt.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/base2tonedesert.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/themes/pastelbonanza.css') }}" rel="stylesheet">
 
     @yield('extra-head')
   </head>
