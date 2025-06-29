@@ -27,7 +27,7 @@
     @yield('extra-head')
   </head>
   <body class="font-sans antialiased theme-{{ is_null(Cookie::get('theme')) ? 'newgeneration' : Cookie::get('theme') }}-body">
-    <div class="xl:ml-[15%] xl:mr-[25%] xl:my-32 lg:mx-[10%] lg:my-16 m-4">
+    <div class="xl:ml-[20%] @if ( isset($page) && is_null($page) && $page == 'home' ) xl:mr-[30%] @else xl:mr-[20%] @endif xl:my-16 lg:mx-[20%] lg:my-8 m-4">
       <div class="flex flex-col md:flex-row">
         <div class="shrink md:mr-8">
           @include('sidebar', ['page' => $page ?? null])

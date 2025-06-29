@@ -25,14 +25,15 @@
 
 <div class="m-4">
 	<h1 class="text-5xl mb-2">Welcome!!!!</h1>
-	<div class="md:grid md:grid-cols-2 md:gap-4">
-		<div>
+	<div class="md:grid md:grid-cols-3 md:gap-4">
+		<div class="col-span-2">
 			<h1 class="text-3xl my-4">Latest Blog</h1>
-			<div class="blog-item px-8 py-8">
+			<div class="blog-item px-8 py-8 max-h-[550px] overflow-hidden relative">
 				@foreach ($blogs as $blog)
 				    <h2 class="text-2xl font-semibold">{{ $blog->title }}</h2><hr class="my-8">
 				    <div class="prose max-w-none">{!! $blog->content_html !!}</div>
 				@endforeach
+				<div class="absolute w-[100%] h-[50px] top-[500px] left-[50%] -translate-x-1/2 bg-white opacity-80 flex justify-center items-center z-30"><a href="{{ route('blog.view', ['id' => $blog->id]) }}">read more</a></div>
 			</div>
 		</div>
 		<div>

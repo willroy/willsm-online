@@ -8,11 +8,25 @@ use Illuminate\Support\Facades\Log;
 
 use App\Models\BlogItem;
 
+use League\CommonMark\CommonMarkConverter;
+
 class BlogController extends Controller
 {
     public function edit($id = null): View
     {
-        return view('blog/edit', []);
+        $blog = BlogItem::findOrFail($id);
+        return view('blog/edit', ['blog' => $blog]);
+    }
+
+    public function view($id = null): View
+    {
+        $blog = BlogItem::findOrFail($id);
+
+        $converter = new CommonMarkConverter();
+
+        $blog->content_html = $converter->convertToHtml($blog->content);
+
+        return view('blog/view', ['blog' => $blog]);
     }
 
     public function save($id = null)

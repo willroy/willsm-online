@@ -1,3 +1,5 @@
+@php $page = "blog" @endphp
+
 @extends('master')
 
 @section('extra-head')

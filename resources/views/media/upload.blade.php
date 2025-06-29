@@ -1,3 +1,5 @@
+@php $page = "media" @endphp
+
 @extends('master')
 
 @section('content')
