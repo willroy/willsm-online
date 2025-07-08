@@ -5,7 +5,7 @@
 @section('content')
 
 
-<div class="absolute bottom-[30rem] -right-[15rem] hidden xl:block z-20 border">
+<div class="absolute bottom-[30rem] -right-[15rem] hidden xl:block z-20 border invisible">
 	<div class="content-banner p-2">
 		<p>Facts Cat</p>
 	</div>
@@ -49,7 +49,7 @@
 
 @section('content-extra')
 
-<div class="xl:hidden border my-8 md:w-[350px] float-right relative">
+<div class="xl:hidden border my-8 md:w-[350px] float-right relative invisible">
 	<div class="content-banner p-2">
 		<p>Facts Cat</p>
 	</div>
