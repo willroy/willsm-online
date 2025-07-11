@@ -44,6 +44,8 @@ class BlogController extends Controller
 
     public function delete($id)
     {
+        $blogItem = BlogItem::findOrFail($id);
+        $blogItem->delete();
         return redirect()->route('blog');
     }
 }

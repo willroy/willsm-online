@@ -21,7 +21,7 @@ Route::get('/media/delete/{id}', [App\Http\Controllers\MediaController::class, '
 Route::get('/media/upload', [App\Http\Controllers\MediaController::class, 'upload'])->name('media.upload')->middleware('auth');
 Route::post('/media/uploadsave', [App\Http\Controllers\MediaController::class, 'uploadsave'])->name('media.uploadsave')->middleware('auth');
 
-Route::get('/blog/view/{id}', [App\Http\Controllers\BlogController::class, 'view'])->name('blog.view')->middleware('auth');
+Route::get('/blog/view/{id}', [App\Http\Controllers\BlogController::class, 'view'])->name('blog.view');
 Route::get('/blog/edit/{id?}', [App\Http\Controllers\BlogController::class, 'edit'])->name('blog.edit')->middleware('auth');
 Route::post('/blog/save/{id?}', [App\Http\Controllers\BlogController::class, 'save'])->name('blog.save')->middleware('auth');
 Route::get('/blog/delete/{id}', [App\Http\Controllers\BlogController::class, 'delete'])->name('blog.delete')->middleware('auth');
