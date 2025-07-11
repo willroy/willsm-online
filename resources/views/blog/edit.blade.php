@@ -10,10 +10,10 @@
 
 @section('content')
    <div class="m-8">
-      <form method="POST" enctype="multipart/form-data" action="{{ route('blog.save') }}">
+      <form method="POST" enctype="multipart/form-data" action="{{ route('blog.save', $blog->id ?? null) }}">
          @csrf
-         <input type="text" name="title" placeholder="Blog title" class="mb-8" />
-         <textarea id="editor" name="content"></textarea>
+         <input type="text" name="title" placeholder="Blog title" class="mb-8" value="{{ $blog->title ?? null }}" />
+         <textarea id="editor" name="content">{{ $blog->content ?? null }}</textarea>
          <button type="submit" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Save</button>
       </form>
 

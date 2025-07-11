@@ -14,7 +14,7 @@ class BlogController extends Controller
 {
     public function edit($id = null): View
     {
-        $blog = BlogItem::findOrFail($id);
+        $blog = BlogItem::find($id);
         return view('blog/edit', ['blog' => $blog]);
     }
 
@@ -34,7 +34,14 @@ class BlogController extends Controller
         $title = request()->title;
         $content = request()->content;
 
-        $blogItem = new BlogItem;
+        Log::info($id);
+
+        if ($id) {
+            $blogItem = BlogItem::findOrFail($id);
+        } else {
+            $blogItem = new BlogItem;
+        }
+
         $blogItem->title = $title;
         $blogItem->content = $content;
         $blogItem->save();
