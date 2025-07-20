@@ -32,8 +32,8 @@
 				@foreach ($blogs as $blog)
 				    <h2 class="text-2xl font-semibold">{{ $blog->title }}</h2><hr class="my-8">
 				    <div class="prose max-w-none">{!! $blog->content_html !!}</div>
+					<div class="absolute w-[100%] h-[50px] bottom-0 left-[50%] -translate-x-1/2 bg-white opacity-80 flex justify-center items-center z-30"><a href="{{ route('blog.view', ['id' => $blog->id]) }}">read more</a></div>
 				@endforeach
-				<div class="absolute w-[100%] h-[50px] bottom-0 left-[50%] -translate-x-1/2 bg-white opacity-80 flex justify-center items-center z-30"><a href="{{ route('blog.view', ['id' => $blog->id]) }}">read more</a></div>
 			</div>
 		</div>
 		<div>
