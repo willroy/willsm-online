@@ -64,7 +64,7 @@ class MainController extends Controller
     public function art(): View
     {
         $tags = Tag::where('type', 'art')->get();
-        $mediaItems = MediaItem::where('type', 'art')->get();
+        $mediaItems = MediaItem::where('type', 'art')->get()->orderBy('created_at', 'desc');
 
         return view('main/art', ['tags' => $tags, 'mediaItems' => $mediaItems]);
     }
