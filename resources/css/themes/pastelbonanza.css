@@ -1,0 +1,67 @@
+.theme-pastelbonanza-body {
+    background-color: #FEFAE0;
+    color: #000000;
+}
+
+.theme-pastelbonanza-body .border {
+    border-style: solid;
+    border-width: 3px;
+    border-color: #978484;
+}
+
+.theme-pastelbonanza-body .button {
+    background-color: #FEFAE0;
+    color: #4e0f0f;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FEFAE0;
+}
+
+.theme-pastelbonanza-body .button-selected {
+    background-color: #bed88d;
+    color: #1a1a1a;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-pastelbonanza-body .blog-item {
+    background-color: #FEFAE0;
+    color: #4e0f0f;
+}
+
+.theme-pastelbonanza-body .sidebar {
+    background-color: #E9EDC9;
+    color: #7e8663;
+}
+
+.theme-pastelbonanza-body .content {
+    background-color: #E9EDC9;
+    color: #7e8663;
+}
+
+.theme-pastelbonanza-body .popup {
+    background-color: #E9EDC9;
+    color: #7e8663;
+}
+
+.theme-pastelbonanza-body .content-banner {
+    background-color: #bed88d;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.theme-pastelbonanza-body .awe-button {
+    border-width: 3px;
+    border-style: outset;
+    border-color: #000;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.theme-pastelbonanza-body .awe-button:hover {
+    border-width: 3px;
+    border-style: inset;
+    border-color: #FFF;
+    border-top-color: #000;
+    border-left-color: #000;
+}

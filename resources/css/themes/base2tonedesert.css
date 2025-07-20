@@ -1,0 +1,66 @@
+.theme-base2tonedesert-body {
+    background-color: #292724;
+    color: #000000;
+}
+
+.theme-base2tonedesert-body .border {
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #978484;
+}
+
+.theme-base2tonedesert-body .button {
+    background-color: #c6ad7b;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-base2tonedesert-body .button-selected {
+    background-color: #e58748;
+    color: #1a1a1a;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.theme-base2tonedesert-body .blog-item {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.theme-base2tonedesert-body .sidebar {
+    background-color: #5c523d;
+    color: #dcd5d0;
+}
+
+.theme-base2tonedesert-body .content {
+    background-color: #5c523d;
+    color: #dcd5d0;
+}
+
+.theme-base2tonedesert-body .popup {
+    background-color: #5c523d;
+    color: #dcd5d0;
+}
+
+.theme-base2tonedesert-body .content-banner {
+    background-color: #e58748;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.theme-base2tonedesert-body .awe-button {
+    border-width: 3px;
+    border-style: outset;
+    border-color: #000;
+    border-top-color: #FFF;
+    border-left-color: #FFF;
+}
+
+.theme-base2tonedesert-body .awe-button:hover {
+    border-width: 3px;
+    border-style: inset;
+    border-color: #FFF;
+    border-top-color: #000;
+    border-left-color: #000;
+}

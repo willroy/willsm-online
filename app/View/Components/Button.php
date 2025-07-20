@@ -11,17 +11,19 @@ class Button extends Component
     public $label;
     public $href;
     public $onclick;
+    public $value;
     public $classes;
     public $container_classes;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($label, $href, $onclick = '', $classes = '', $container_classes = '')
+    public function __construct($label, $href = '', $onclick = '', $value = '', $classes = '', $container_classes = '')
     {
        $this->label = $label;
        $this->href = $href;
        $this->onclick = $onclick;
+       $this->value = $value;
        $this->classes = $classes;
        $this->container_classes = $container_classes;
     }

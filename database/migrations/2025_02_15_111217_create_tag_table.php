@@ -18,6 +18,11 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        
+        DB::table('tag')->insert([ 'id'=>'1', 'type'=>'art', 'handle'=>'paper' ]);
+        DB::table('tag')->insert([ 'id'=>'2', 'type'=>'art', 'handle'=>'digital' ]);
+        DB::table('tag')->insert([ 'id'=>'3', 'type'=>'art', 'handle'=>'animation' ]);
     }
 
     /**

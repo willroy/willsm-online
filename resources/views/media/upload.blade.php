@@ -1,3 +1,5 @@
+@php $page = "media" @endphp
+
 @extends('master')
 
 @section('content')
@@ -5,7 +7,7 @@
       @csrf
       <select name="type" class="m-2">
          <option value="art">Art</option>
-         <option value="music">Music</option>
+         <option value="media">Media</option>
       </select>
 
       <input type="file" class="form-control" name="uploaded[]" multiple />
