@@ -1,9 +1,6 @@
-Two column grid with components
-
-component ideas:
-
-- about me with icon, role and sentence or two
-- Langaughes and Frameworks (list of icons and names of techs and clicking them highlights and brings up text as explaination of how I have used it)
-- git contribution graph
-- employment / education timeline
-- github projects
+- reduce container padding on mobile
+- add 'more' buttons to latest blog / art on home page
+- rename recent art to latest art
+- change website font? content font / interface font?
+- work on facts cat
+- motd somewhere?
